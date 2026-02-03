@@ -29,7 +29,7 @@ const BottomNavigation = ({
   onTabPress,
 }: BottomNavigationProps) => {
   const insets = useSafeAreaInsets();
-  const { floatingButtonContainer, navSection, navItem, linearGradient, centerSpacer } = styles;
+  const { floatingButtonContainer, buttonBackdrop, navSection, navItem, linearGradient, centerSpacer } = styles;
 
   return (
     <View className="relative">
@@ -37,6 +37,7 @@ const BottomNavigation = ({
         className="absolute -top-7 left-1/2 z-10"
         style={floatingButtonContainer}
       >
+        <View style={buttonBackdrop} />
         <ExpandableButton
           onActionPress={onActionPress}
           onCenterPress={onCenterPress}
