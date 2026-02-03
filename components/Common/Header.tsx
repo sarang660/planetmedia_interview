@@ -13,7 +13,7 @@ const Header = ({
   onBackPress,
   onNotificationPress,
 }: HeaderProps) => (
-  <View className="flex-row items-center justify-between px-4 py-3 bg-white">
+  <View className="flex-row items-center justify-between px-4 py-3 bg-transparent">
     <TouchableOpacity className="p-2" onPress={onBackPress}>
       <Ionicons color={colors.black} name="chevron-back" size={24} />
     </TouchableOpacity>
