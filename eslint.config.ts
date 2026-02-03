@@ -236,7 +236,7 @@ export default tseslint.config({
     'react-native/no-raw-text': [
       'error',
       {
-        skip: ['CustomText', 'Text'],
+        skip: ['CustomText', 'Text', 'Typography'],
       },
     ],
     'react-native/no-single-element-style-arrays': 'error',
