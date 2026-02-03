@@ -22,7 +22,7 @@ A React Native mobile application built with Expo.
    Create a `.env` file in the root directory:
 
    ```
-   EXPO_PUBLIC_API_URL=https://your-api-url.com
+   EXPO_PUBLIC_API_URL=https://infocare-dev.infocare.dev
    ```
 
 ## Running the App
