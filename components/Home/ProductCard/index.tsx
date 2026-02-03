@@ -8,11 +8,10 @@ import { Ionicons } from "@expo/vector-icons";
 
 import Typography from "@/components/ui/Typography";
 import { colors } from "@/styles/colors";
-
+import { type Product } from "@/types/products";
 
 import { styles } from "./styles";
 
-import { type Product } from "../types";
 
 interface ProductCardProps {
   product: Product;

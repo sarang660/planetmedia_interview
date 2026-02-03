@@ -1,5 +1,6 @@
+import { type Product } from "@/types/products";
+
 import { INITIAL_COUNT, PAGE_SIZE } from "./constants";
-import { type Product } from "./types";
 
 export const getPageProducts = (
   products: Product[],

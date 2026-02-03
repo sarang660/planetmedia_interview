@@ -44,3 +44,4 @@ app-example
 
 # ESLint cache
 .eslintcache
+.env

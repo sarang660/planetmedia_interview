@@ -3,8 +3,9 @@ import { useState, useCallback, useMemo } from "react";
 import { Gesture } from "react-native-gesture-handler";
 import { runOnJS } from "react-native-reanimated";
 
+import { type Product } from "@/types/products";
+
 import { SWIPE_THRESHOLD } from "../constants";
-import { type Product } from "../types";
 import { getPageProducts, getTotalPages } from "../utils";
 
 interface UsePaginatedSwipeProps {
@@ -43,13 +44,16 @@ export const usePaginatedSwipe = ({
 
   const panGesture = useMemo(
     () =>
-      Gesture.Pan().onEnd((event) => {
-        if (event.translationX < -SWIPE_THRESHOLD) {
-          runOnJS(goToNextPage)();
-        } else if (event.translationX > SWIPE_THRESHOLD) {
-          runOnJS(goToPreviousPage)();
-        }
-      }),
+      Gesture.Pan()
+        .activeOffsetX([-20, 20])
+        .failOffsetY([-10, 10])
+        .onEnd((event) => {
+          if (event.translationX < -SWIPE_THRESHOLD) {
+            runOnJS(goToNextPage)();
+          } else if (event.translationX > SWIPE_THRESHOLD) {
+            runOnJS(goToPreviousPage)();
+          }
+        }),
     [goToNextPage, goToPreviousPage]
   );
 
